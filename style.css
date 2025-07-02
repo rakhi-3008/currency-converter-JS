@@ -92,12 +92,78 @@ form button{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-@media(max-width:420px){
-    .container{
-        width: 60%;
-        padding: 1rem;
-    }
-    .dropdown{
-        flex-direction: column;
-    }
+/* ---------------- Responsive Design ---------------- */
+
+/* Small phones: 0px to 480px */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .select-container {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .select-container img {
+    width: 40px;
+    height: 30px;
+  }
+
+  .amount input,
+  select,
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .msg {
+    font-size: 14px;
+  }
+}
+
+/* Tablets: 481px to 768px */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .dropdown {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .select-container {
+    flex: 1 1 45%;
+  }
+
+  .msg {
+    font-size: 15px;
+  }
+}
+
+/* Large Screens: 1024px and above */
+@media (min-width: 1024px) {
+  .container {
+    width: 450px;
+  }
+
+  .amount input,
+  select,
+  button {
+    font-size: 16px;
+  }
+
+  .msg {
+    font-size: 16px;
+  }
 }
